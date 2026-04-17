@@ -1,5 +1,5 @@
 # Combined-Model-for-Electricity-Prediction
-This project uses combined models to predicted the electricity temperature in order to practice the proficiency of using neural network and machine learning, especially for undergraduates
+This project uses combined models to predicted the electricity temperature in order to promote the proficiency of using neural network and machine learning, especially for undergraduates
 
 **The Problem This Program Solve:**
 
@@ -41,3 +41,14 @@ Step 5(Chooseable): How to detect the noise and delete it
 The code names Rubustness_Delete the Impulse Noise.py, use it.
 
 **At last, we show our sincerely gratitude to the datasets producer Haoyi Zhou et al.**
+
+
+
+#电力预测综合模型
+介绍：该项目旨在对区域电力做出预测，并提升本科生使用神经网络模型的能力
+
+**该项目解决的问题：**
+电力分配问是电网根据顺序变化的需求管理电力分配到不同用户区域。但要预测特定用户区域的未来需求是困难的，因为它随工作日、假日、季节、天气、温度等的不同因素变化而变化。现有预测方法不能适用于长期真实世界数据的高精度长期预测，并且任何错误的预测都可能产生严重的后果。因此当前没有一种有效的方法来预测未来的用电量，管理人员就不得不根据经验值做出决策，而经验值的阈值通常远高于实际需求。保守的策略导致不必要的电力和设备折旧浪费。值得注意的是，变压器的油温可以有效反映电力变压器的工况。（参考自：Haoyi Zhou, et al. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting. (14 Dec 2020) https://doi.org/10.48550/arXiv.2012.07436）根据背景介绍，我们提出了一个名为‘SVD-MC-Transformer-SS’的组合模型。这个名字听起来有些唬人，但是它只是由四个简单的模型组合起来的综合模型，它们分别是‘SVD-奇异值分解’，Monte-Carlo Dropout, Transformer, Sampling-SHAP模型。
+
+**为何我们会使用该组合模型**
+由于Transformer模型的稳健性十分良好，所以将Transformer模型作为出发点开始研究。在日常时，大量核心数据还是得通过人工而不是电脑去记录，所以我们考虑到人工记录错数据的情况发生，为了杜绝这种现象，我们使用SVD模型及逆行奇异值分解后将异常值进行删除
