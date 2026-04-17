@@ -43,12 +43,41 @@ The code names Rubustness_Delete the Impulse Noise.py, use it.
 **At last, we show our sincerely gratitude to the datasets producer Haoyi Zhou et al.**
 
 
-
-#电力预测综合模型
+中文版：
+**电力预测综合模型**
 介绍：该项目旨在对区域电力做出预测，并提升本科生使用神经网络模型的能力
 
 **该项目解决的问题：**
-电力分配问是电网根据顺序变化的需求管理电力分配到不同用户区域。但要预测特定用户区域的未来需求是困难的，因为它随工作日、假日、季节、天气、温度等的不同因素变化而变化。现有预测方法不能适用于长期真实世界数据的高精度长期预测，并且任何错误的预测都可能产生严重的后果。因此当前没有一种有效的方法来预测未来的用电量，管理人员就不得不根据经验值做出决策，而经验值的阈值通常远高于实际需求。保守的策略导致不必要的电力和设备折旧浪费。值得注意的是，变压器的油温可以有效反映电力变压器的工况。（参考自：Haoyi Zhou, et al. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting. (14 Dec 2020) https://doi.org/10.48550/arXiv.2012.07436）根据背景介绍，我们提出了一个名为‘SVD-MC-Transformer-SS’的组合模型。这个名字听起来有些唬人，但是它只是由四个简单的模型组合起来的综合模型，它们分别是‘SVD-奇异值分解’，Monte-Carlo Dropout, Transformer, Sampling-SHAP模型。
+电力分配问是电网根据顺序变化的需求管理电力分配到不同用户区域。但要预测特定用户区域的未来需求是困难的，因为它随工作日、假日、季节、天气、温度等的不同因素变化而变化。现有预测方法不能适用于长期真实世界数据的高精度长期预测，并且任何错误的预测都可能产生严重的后果。因此当前没有一种有效的方法来预测未来的用电量，管理人员就不得不根据经验值做出决策，而经验值的阈值通常远高于实际需求。保守的策略导致不必要的电力和设备折旧浪费。值得注意的是，变压器的油温可以有效反映电力变压器的工况。（参考自：Haoyi Zhou, et al. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting. (14 Dec 2020) https://doi.org/10.48550/arXiv.2012.07436）
+根据背景介绍，我们提出了一个名为‘SVD-MC-Transformer-SS’的组合模型。这个名字听起来有些唬人，但是它只是由四个简单的模型组合起来的综合模型，它们分别是‘SVD-奇异值分解’，Monte-Carlo Dropout, Transformer, Sampling-SHAP模型。
 
 **为何我们会使用该组合模型**
-由于Transformer模型的稳健性十分良好，所以将Transformer模型作为出发点开始研究。在日常时，大量核心数据还是得通过人工而不是电脑去记录，所以我们考虑到人工记录错数据的情况发生，为了杜绝这种现象，我们使用SVD模型及逆行奇异值分解后将异常值进行删除
+由于Transformer模型的稳健性十分良好，所以将Transformer模型作为出发点开始研究。在日常时，大量核心数据还是得通过人工而不是电脑去记录，所以我们考虑到人工记录错数据的情况发生，为了杜绝这种现象，我们使用SVD模型奇异值分解后，使用类主成分分析法和IQR法将异常值进行删除
+
+但我们不仅仅关注模型预测的精确度，还要关注模型的可靠性。因此我们使用Monte-Carlo Dropout来量化预测的不确定程度，方便电力工作者们根据本次预测的结果进行电力预测工作。
+
+但显然，了解模型的预测精确度还不够，还应该了解模型预测值是由哪些特征因素所造成。因此我们引入Sampling-SHAP模型，它是SHAP模型的升级，可以使用更少的算力计算不同特征因素对本次预测的重要程度，从而为电力工作者提供强有力的预测依据支撑。
+
+**如何使用这些代码**
+第一步：找到原始数据集
+
+通过以下两种方法可以找到原始数据集，第一个方法是数据原始来源：https://github.com/zhouhaoyi/ETDataset；第二个方法是直接提取该代码库的数据，位置在（Datasets-Row Datasets）
+
+第二步：运行代码
+
+首先您必须下载Python运行这些代码，所有与模型有关的代码都放在文件夹（Code-Model Code）中。其中除Transformer外的四个模型ARIMA, LSTM, LightGBM, XGBoost，是用来与组合模型作拟合性能比较的
+所有代码都写好了注释供您学习
+
+第三步：（可选）绘制结果
+
+使用‘The Code that Generates Graph’来绘制拟合结果。
+
+第四步：（可选）加入椒盐噪声验证模型稳健性
+
+代码名称为‘Add Impulse Noise.py’，运行它就好
+
+第五步：（可选）检查噪声并且删除噪声
+
+该过程代码名称为Rubustness_Delete the Impulse Noise.py，使用它就好
+
+最后我们衷心感谢数据集的提供者Haoyi Zhou等人。
