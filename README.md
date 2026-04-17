@@ -4,7 +4,7 @@ This project uses combined models to predicted the electricity temperature in or
 **The Problem This Program Solve:**
 
 The program attend to solve the electricity forecasting problems, as the electricity forecast is difficult cause it depends on weekdays, holidays, seasons, weather, temperatures, etc. However, no existing method can perform a long-term prediction based on super long-term real-world data with high precision. Any false prophecy may damage the electrical transformer. So currently, without an efficient method to predict future electric usage, managers have to make decisions based on the empirical number, which is much higher than the real-world demands. It causes unnecessary waste of electric and equipment depreciation. On the other hand, the oil temperatures can reflect the condition of electricity Transformer. One of the most efficient strategies is to predict how the electrical transformers' oil temperature is safe and avoid unnecessary waste.
-(The reference is from: Haoyi Zhou, et al. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting. (14 Dec 2020) https://doi.org/-10.48550/arXiv.2012.07436)
+(The reference is from: Haoyi Zhou, et al. Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting. (14 Dec 2020) https://doi.org/10.48550/arXiv.2012.07436)
 Base on the datasets that the reference above provided, we put out a combined-model that named 'SVD-MC-Transformer-SS' model. Don't be scared the model name, cause it is contributed by 4 basic models that called the 'SVD-Singular Value Decomposition', 'Monte- Carlo Dropout', 'Transformer', 'Sampling-SHAP', respectively.
 
 **Introduce Why We Need to Use These Models to Predict the Target Value:**
