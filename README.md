@@ -17,10 +17,10 @@ Obviously, its not enough to quantify the model reliability by Monte-Carlo Dropo
 
 **How to Use The Code:**
 
-Step 1: Find row datasets
+Step 1: Find raw datasets
 
-You can find the row datasets in this link: https://github.com/zhouhaoyi/ETDataset
-If you don't want to search the link. The row datasets is entirely downloaded in the fold: 'Datasets-Row datasets'
+You can find the raw datasets in this link: https://github.com/zhouhaoyi/ETDataset
+If you don't want to search the link. The raw datasets is entirely downloaded in the fold: 'Datasets-Row datasets'（Spell mistake）
 
 Step 2: Find the code
 
