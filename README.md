@@ -15,7 +15,22 @@ Not only we have to ensure the model prediction precision, but also the model re
 
 Obviously, its not enough to quantify the model reliability by Monte-Carlo Dropout only. In daily work, workers are interested about the predicted value most likely caused by which feature value. To address this issue, we  apply the 'Sampling-SHAP' method which is the update of 'SHAP' method. It employs Monte-Carlo method to approximately quantify the 'importance arguments' in feature values. This method will give a strong evidence for workers to distribute the electricity.
 
+**The Results**
+
+The table below depicts the results of different model fit the raw data(only ETTh1 and ETTm1). The SVD-MC-Transformer model is the key index that we interested in. The results illustrate that in the Noise_h1 dataset, SVD-MC-Transformer fits better than other traditional models. Compared with the Pure-Transformer model, its determination coefficient increases 2.8%. In the Noise_m1 datasets, SVD-MC-Transformer model determination coefficient increases 6.4% compared with Pure-Transformer model.
+
 <img width="827" height="676" alt="Screenshot 2026-04-18 081656" src="https://github.com/user-attachments/assets/dfbc06b0-d4c2-40b5-9315-a9ae84172c7d" />
+
+According to the table below, The highest prediction uncertainty (mean prediction standard deviation) of the model across 50 runs on the test set is 0.1354, the lowest is 0.0754, and the average is 0.0975, indicating high model stability and no significant overfitting.
+
+<img width="823" height="368" alt="Screenshot 2026-04-18 081935" src="https://github.com/user-attachments/assets/8ccb9065-7626-40cf-b137-23daa9bd7510" />
+
+
+According to the table below, The quantitative analysis of feature importance from the Sampling SHAP model for the transformer oil temperature (OT) prediction task shows that, across ten independent attribution runs, the importance coefficient of the OT column remains stable at approximately 0.78, while the importance coefficients of the other feature columns (HUFL, HULL, MUFL, MULL, LUFL, LULL) are all at relatively low levels.
+
+However, in practical applications, if the importance coefficient of a certain external feature suddenly increases over a specific time period, even approaching or exceeding the historical influence of the OT column, this phenomenon is highly likely caused by strong disturbances from that external factor. In such cases, the relevant departments should strengthen risk management and control regarding the potential risks posed by the relevant feature.
+
+<img width="827" height="325" alt="Screenshot 2026-04-18 082058" src="https://github.com/user-attachments/assets/7ef9e2c0-a46c-4361-ac2e-b73298441a6b" />
 
 **How to Use The Code:**
 
