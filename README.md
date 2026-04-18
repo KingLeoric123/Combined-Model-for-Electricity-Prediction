@@ -15,30 +15,7 @@ Not only we have to ensure the model prediction precision, but also the model re
 
 Obviously, its not enough to quantify the model reliability by Monte-Carlo Dropout only. In daily work, workers are interested about the predicted value most likely caused by which feature value. To address this issue, we  apply the 'Sampling-SHAP' method which is the update of 'SHAP' method. It employs Monte-Carlo method to approximately quantify the 'importance arguments' in feature values. This method will give a strong evidence for workers to distribute the electricity.
 
-模型名称	数据集名称	MAE	RMSE	R²
-LightGBM	ETTm1	0.2195	0.3422	0.9793	
-	        ETTh1	0.4374	0.6485	0.9255
-	     Noise-m1	0.2491	0.8375	0.8860
-	     Noise-h1	0.4759	1.1831	0.7811
-XGBoost	  ETTm1	0.2163	0.3374	0.9799
-	        ETTh1	0.4332	0.6439	0.9265
-    	Noise-m1	0.2437	0.8352	0.8866
-    	Noise-h1	0.4749	1.1859	0.7801
-LSTM    	ETTm1	0.8050 	0.9326	0.9259
-        	ETTh1	4.1360 	4.9347	-1.1110 
-     	Noise-m1	0.9687	1.4573	0.8060 
-    	Noise-h1	3.4820 	4.2272	-0.4512
-Transformer	ETTm1	0.2262	0.3293	0.9909
-	ETTh1	0.4758	0.6624	0.9630 
-	Noise-m1	0.2521	0.9675	0.9254
-	Noise-h1	0.4763	0.9206	0.9311
-SVD-MC-Transformer	Noise-h1	0.4955	0.6994	0.9570
-	Noise-m1	0.2312	0.4176	0.9848
-ARIMA	ETTm1	0.2387	0.3616	0.9890 
-	ETTh1	0.4488	0.6555	0.9637
-	Noise-m1	失效　	失效　	失效　
-	Noise-h1	0.4937	1.0968	0.9022
-
+<img width="827" height="676" alt="Screenshot 2026-04-18 081656" src="https://github.com/user-attachments/assets/dfbc06b0-d4c2-40b5-9315-a9ae84172c7d" />
 
 **How to Use The Code:**
 
