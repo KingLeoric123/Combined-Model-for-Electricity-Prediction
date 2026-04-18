@@ -40,7 +40,7 @@ Step 5(Chooseable): How to detect the noise and delete it
 
 The code names Rubustness_Delete the Impulse Noise.py, use it.
 
-**At last, we show our sincerely gratitude to the datasets producer Haoyi Zhou et al.**
+**At last, we express our sincerely gratitude to the datasets producer Haoyi Zhou et al.**
 
 
 **中文版：**
