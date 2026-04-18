@@ -58,7 +58,7 @@ According to the table 3 below, The quantitative analysis of feature importance 
 However, in practical applications, if the importance coefficient of a certain external feature suddenly increases over a specific time period, even approaching or exceeding the historical influence of the OT column, this phenomenon is highly likely caused by strong disturbances from that external factor. In such cases, the relevant departments should strengthen risk management and control regarding the potential risks posed by the relevant feature.
 
 **Table 3 Sampling-SHAP Results**
-<img width="827" height="325" alt="Screenshot 2026-04-18 082058" src="https://github.com/user-attachments/assets/7ef9e2c0-a46c-4361-ac2e-b73298441a6b" />
+<img width="781" height="289" alt="Screenshot 2026-04-18 085557" src="https://github.com/user-attachments/assets/f6aae2aa-0a14-4a6c-9bb7-bbf233ceb9ad" />
 
 **At last, we express our sincerely gratitude to the datasets producer Haoyi Zhou et al.**
 
