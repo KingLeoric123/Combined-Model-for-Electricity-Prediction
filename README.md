@@ -71,8 +71,9 @@ The code names Rubustness_Delete the Impulse Noise.py, use it.
 
 第二步：运行代码
 
-首先您必须下载Python运行这些代码，所有与模型有关的代码都放在文件夹（Code--Model Code）中。其中除Transformer外的四个模型ARIMA, LSTM, LightGBM, XGBoost，是用来与组合模型作拟合性能比较的
-所有代码都写好了注释供您学习
+首先您必须下载Python运行这些代码，所有与模型有关的代码都放在文件夹（Code--Model Code）中。其中除Transformer外的四个模型ARIMA, LSTM, LightGBM, XGBoost，是用来与组合模型作拟合性能比较的.
+
+所有代码都写好了注释供您学习.
 
 第三步：（可选）绘制结果
 
