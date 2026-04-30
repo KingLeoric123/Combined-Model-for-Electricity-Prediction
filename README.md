@@ -1,6 +1,7 @@
 # Combined-Model-for-Electricity-Prediction
-This project uses combined models to predicted the electricity temperature in order to promote the proficiency of using neural network and machine learning, especially for undergraduates
+Introduction: This project uses combined models to predicted the electricity temperature in order to promote the proficiency of using neural network and machine learning, especially for undergraduates
 
+# UpGrade: April 20th 2026
 **The Problem This Program Solve:**
 
 The program attend to solve the electricity forecasting problems, as the electricity forecast is difficult cause it depends on weekdays, holidays, seasons, weather, temperatures, etc. However, no existing method can perform a long-term prediction based on super long-term real-world data with high precision. Any false prophecy may damage the electrical transformer. So currently, without an efficient method to predict future electric usage, managers have to make decisions based on the empirical number, which is much higher than the real-world demands. It causes unnecessary waste of electric and equipment depreciation. On the other hand, the oil temperatures can reflect the condition of electricity Transformer. One of the most efficient strategies is to predict how the electrical transformers' oil temperature is safe and avoid unnecessary waste.
@@ -61,6 +62,8 @@ However, in practical applications, if the importance coefficient of a certain e
 <img width="781" height="289" alt="Screenshot 2026-04-18 085557" src="https://github.com/user-attachments/assets/f6aae2aa-0a14-4a6c-9bb7-bbf233ceb9ad" />
 
 **At last, we express our sincerely gratitude to the datasets producer Haoyi Zhou et al.**
+
+# UpGrade 1st May 2026
 
 
 **中文版：**
